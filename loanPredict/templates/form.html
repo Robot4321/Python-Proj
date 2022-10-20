@@ -1,10 +1,33 @@
 <div class="container">
+    <form action="/result" method="post">{% csrf_token %}
+        
     <div class="row g-3">
         <div class="col">
-          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+          <input type="text" class="form-control" placeholder="Full Name" aria-label="Full Name" name="Name">
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+          <input type="text" class="form-control" placeholder="Credit History" aria-label="Last name" name="Credit_History">
         </div>
-      </div>      
+    </div>
+    <br>
+    <div class="row g-3">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Income" aria-label="Last name" name="ApplicantIncome">
+        </div>
+        <div class="col">
+            <input type="text" class="form-control" placeholder="Loan Amount" aria-label="Last name" name="LoanAmount">  
+        </div>
+    </div>
+    <br>
+    <div class="row g-3">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Loan Term in Days" aria-label="Last name" name="Loan_Amount_Term">
+          </div>
+    </div>
+      <br>
+
+      <input type="submit" class="btn btn-primary" value="Analyze">
+    </form>      
 </div>
+
+<!-- Credit_History', 'ApplicantIncome', 'LoanAmount','Loan_Amount_Term, 'name' -->
